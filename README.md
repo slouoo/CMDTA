@@ -4,24 +4,34 @@ CMDTA is a novel deep learning framework for accurately predicting drug-target a
 ## Framework
 ![CMDTA Framework](CMDTA_Framework.png)
 
-## File list
-- Dataset: The Folder contains the 3D structures of all targets in benchmarks.
-- Vocab: The Folder contains the vocabulary files.
-- gvp: The Folder contains gvp-gnn model.
-- built_vocab.py: The file is used to build the vocabulary files.
-- dataset.py: The code about dataset.
-- model.py: The code about CMDTA model.
-- main.py: The code about training the CMDTA model.
-- utils.py: The code about utils.
+## Installation
+First, you need to clone our code to your operating system.
+
+```
+git clone https://github.com/slouoo/CMDTA.git
+cd CMDTA
+```
 
 
-## Requirements
-- networkx==3.1
-- numpy==1.24.3
-- pandas==1.5.3
-- rdkit==2022.03.2
-- scikit_learn==1.3.0
-- scipy==1.10.1
-- torch==1.12.1
-- torch_geometric==2.3.1
-- tqdm==4.65.0
+## The environment of PocketDTA
+Before running the code, you need to configure the environment, which mainly consists of the commonly used torch==1.13.0+cu117, rdkit==2023.3.2, torch-geometric==2.3.1 and other basic packages.
+```
+python==3.7.16
+torch==1.13.0+cu117
+torch-geometric==2.3.1
+scipy==1.7.3
+rdkit==2023.3.2
+pandas==1.3.5
+ogb==1.3.5
+networkx==2.6.3
+mol2vec==0.2.2
+fair-esm==2.0.0
+h5py==3.8.0
+dgl==1.1.3
+```
+Of course you can also directly use the following to create a new environment:
+```
+conda create -n PocketDTA python==3.7
+conda activate PocketDTA
+pip install requirements.txt
+```
