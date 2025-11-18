@@ -5,8 +5,6 @@ CMDTA is a novel deep learning framework for accurately predicting drug-target a
 ![CMDTA Framework](CMDTA_Framework.png)
 
 ## Installation
-First, you need to clone our code to your operating system.
-
 ```
 git clone https://github.com/slouoo/CMDTA.git
 cd CMDTA
@@ -24,3 +22,5 @@ pandas==2.0.3
 networkx==3.1
 atom3d==0.2.6
 ```
+## :books: Dataset
+The two benchmark datasets Davis and KIBA and the target 3D structure are available in [Google Cloud Drive](https://drive.google.com/file/d/1osd9GRS1itQUi8e3NzBlZdnndllfIGxV/view?usp=sharing).
