@@ -3,7 +3,7 @@ A deep learning framework to predict drug-target affinity
 
 
 ## Framework
-![CMDTA Framework](CMDTA.tif)
+![CMDTA Framework](CMDTA_Framework.png)
 
 ## File list
 - Model: The Folder contains the trained model of DMFF-DTA.
