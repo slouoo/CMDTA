@@ -29,9 +29,3 @@ fair-esm==2.0.0
 h5py==3.8.0
 dgl==1.1.3
 ```
-Of course you can also directly use the following to create a new environment:
-```
-conda create -n PocketDTA python==3.7
-conda activate PocketDTA
-pip install requirements.txt
-```
