@@ -13,19 +13,14 @@ cd CMDTA
 ```
 
 
-## The environment of PocketDTA
-Before running the code, you need to configure the environment, which mainly consists of the commonly used torch==1.13.0+cu117, rdkit==2023.3.2, torch-geometric==2.3.1 and other basic packages.
+## Requirements of CMDTA
 ```
-python==3.7.16
-torch==1.13.0+cu117
-torch-geometric==2.3.1
-scipy==1.7.3
-rdkit==2023.3.2
-pandas==1.3.5
-ogb==1.3.5
-networkx==2.6.3
-mol2vec==0.2.2
-fair-esm==2.0.0
-h5py==3.8.0
-dgl==1.1.3
+python==3.8.20
+torch==2.4.1+cu126
+torch-geometric==2.6.1
+scipy==1.10.1
+rdkit==2022.9.5
+pandas==2.0.3
+networkx==3.1
+atom3d==0.2.6
 ```
