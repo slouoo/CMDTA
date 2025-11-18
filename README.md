@@ -1,18 +1,17 @@
 # CMDTA: an advanced cross-modal deep learning framework for enhanced prediction of drug-target affinity
-A deep learning framework to predict drug-target affinity
-
+CMDTA is a novel deep learning framework for accurately predicting drug-target affinity (DTA). By uniquely leveraging both 1D sequence and 3D structural information through a parallel dual-path architecture, CMDTA provides a more comprehensive and precise model of molecular interactions.
 
 ## Framework
 ![CMDTA Framework](CMDTA_Framework.png)
 
 ## File list
-- Model: The Folder contains the trained model of DMFF-DTA.
+- Dataset: The Folder contains the 3D structures of all targets in benchmarks.
 - Vocab: The Folder contains the vocabulary files.
+- gvp: The Folder contains gvp-gnn model.
 - built_vocab.py: The file is used to build the vocabulary files.
 - dataset.py: The code about dataset.
-- model.py: The code about model.
-- main_warm_up.py: The code about training the warm-up model.
-- main.py: The code about training the DMFF-DTA model.
+- model.py: The code about CMDTA model.
+- main.py: The code about training the CMDTA model.
 - utils.py: The code about utils.
 
 
