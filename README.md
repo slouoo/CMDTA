@@ -14,8 +14,12 @@ cd CMDTA
 ## Requirements of CMDTA
 ```
 python==3.8.20
-torch==2.4.1+cu126
+torch==2.4.1+cu124
 torch-geometric==2.6.1
+torch-cluster==1.6.3
+torch-scatter==2.1.2
+torch-sparse==0.6.18
+scikit-learn==1.3.2
 scipy==1.10.1
 rdkit==2022.9.5
 pandas==2.0.3
