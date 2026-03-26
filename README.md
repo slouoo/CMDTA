@@ -1,3 +1,4 @@
+
 # CMDTA: Cross-Modal Deep Learning Framework for Drug-Target Affinity Prediction
 
 ![Python 3.8](https://img.shields.io/badge/Python-3.8.20-blue.svg)
@@ -28,3 +29,67 @@ CMDTA/
 ├── model.py             # Model architecture definitions (CMDTA, GINConv, SeqEncoder)
 ├── utils.py             # Helper functions for data parsing, graph extraction, and metrics
 └── README.md
+````
+
+## 🛠️ Installation & Setup
+
+We recommend using [Anaconda](https://www.anaconda.com/) or Miniconda to manage your environment.
+
+**1. Clone the repository:**
+
+```bash
+git clone [https://github.com/slouoo/CMDTA.git](https://github.com/slouoo/CMDTA.git)
+cd CMDTA
+```
+
+**2. Create and activate a conda environment:**
+
+```bash
+conda create -n cmdta python=3.8.20
+conda activate cmdta
+```
+
+**3. Install dependencies:**
+
+```bash
+pip install torch==2.4.1+cu124 --extra-index-url [https://download.pytorch.org/whl/cu124](https://download.pytorch.org/whl/cu124)
+pip install torch-geometric==2.6.1 torch-cluster==1.6.3 torch-scatter==2.1.2 torch-sparse==0.6.18
+pip install scikit-learn==1.3.2 scipy==1.10.1 pandas==2.0.3 networkx==3.1 atom3d==0.2.6
+pip install rdkit==2022.9.5
+```
+
+## 📊 Dataset Preparation
+
+The model is evaluated on two standard benchmark datasets: **Davis** and **KIBA**. Due to file size constraints, the cleaned datasets and the target 3D structures (PDB files) are hosted externally.
+
+1.  Download the datasets from our [Google Cloud Drive](https://drive.google.com/file/d/1osd9GRS1itQUi8e3NzBlZdnndllfIGxV/view?usp=sharing).
+2.  Extract the downloaded archive.
+3.  Place the sequence CSV files (e.g., `kiba_dataset_cleaned.csv` or `davis_dataset_cleaned.csv`) in the root directory.
+4.  Place the 3D structure files in the corresponding `Dataset/<dataset_name>/protein/` directories.
+
+## 🚀 Training and Evaluation
+
+You can train the CMDTA model by running the `main.py` script. The script performs k-fold style runs across multiple random seeds to ensure robust evaluation.
+
+```bash
+python main.py
+```
+
+**Configurations (editable in `main.py`):**
+
+  - `dataset_name`: Choose between `'kiba'` or `'davis'`.
+  - `LR`: Learning rate (default: 1e-3).
+  - `batch_size`: Default is 64.
+  - `NUM_EPOCHS`: Default is 200 (includes early stopping).
+
+**Outputs:**
+
+  - **Model Checkpoints:** Saved in the `./Model/` directory (e.g., `best_model_kiba_seed42.pt`).
+  - **Evaluation Metrics:** A summary CSV file (e.g., `kiba_result_nf.csv`) will be generated containing the Mean Squared Error (MSE), Concordance Index (CI), and $r_m^2$ metrics across all random seeds.
+
+## 📄 License
+
+This project is licensed under the terms of the [MIT License](https://www.google.com/search?q=LICENSE).
+
+```
+```
